@@ -3,7 +3,8 @@
 Vous trouverez dans ce fichier **Readme** l'énoncé de chaque exercice noté dans le cadre du projet tutoré central à cet enseignement sur **JAVA: Bibliothèques et Patterns**.
 _La solution de chaque exercice fera d'ailleurs l'objet d'un nouveau projet Git ici-même._
 
-Voici donc sans plus attendre le l'énoncer de premier exercice noté de la toute première session de ce projet.
+Voici donc l'énoncé, pour rappel du Moodle, de l'exercice qui a fait l'objet de la présente solution.
+Il s'agit du 1er exercice noté de la toute première session de ce projet.
 
 ---
 
