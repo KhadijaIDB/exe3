@@ -41,7 +41,8 @@ Se baser sur le site https://mvnrepository.com/ et sur cette configuration...
 
 ...pour:
 
- - [ ] Intégrer au projet la ou les librairies jar nécessaire(s) à l'utilisation de la denière version finale et stable connue de log4j, dans un répertoire lib
+ - [ ] Intégrer au projet la ou les librairies jar nécessaire(s) à l'utilisation de la denière version finale et stable connue de log4j, dans un répertoire lib (Astuce: ne prendre que le strict minimum pour éviter les conflits/surcharges, 2 jars suffisent)
+ - [ ] Positionner la configuration ci-dessus dans le chemin de compilation (src) afin qu'il soit intégré dans le classpath (chemin d'exécution), sous le nom **log4j2.xml** (ceci est une aide supplémentaire, néanmoins il faut être capable de la comprendre à partir des documentations)
  - [ ] Adapter le script de test pour que cet/ces librairie(s) fasse partie du "chemin de classe "de java"
  - [ ] Suite à une étude rapide du framework log4j, transformer l'ensemble des sorties console (*System.out.println*) en appels log4j
  - [ ] Modifier le format de sortie pour que chaque message log tienne sur une ligne et resszemble à:
