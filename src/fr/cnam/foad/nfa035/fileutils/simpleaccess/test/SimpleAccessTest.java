@@ -2,6 +2,9 @@ package fr.cnam.foad.nfa035.fileutils.simpleaccess.test;
 
 import fr.cnam.foad.nfa035.fileutils.simpleaccess.ImageSerializer;
 import fr.cnam.foad.nfa035.fileutils.simpleaccess.ImageSerializerBase64Impl;
+import org.apache.log4j.*;
+import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -14,8 +17,8 @@ import java.util.Arrays;
  */
 public class SimpleAccessTest {
 
-    /**
-     * Test unitaire fait maison
+    static private  Logger log =Logger.getLogger(SimpleAccessTest.class);
+     /* Test unitaire fait maison
      *
      * @param args
      */
@@ -26,7 +29,7 @@ public class SimpleAccessTest {
 
             // Sérialization
             String encodedImage = (String) serializer.serialize(image);
-            System.out.println(splitDisplay(encodedImage,76));
+            log.info(splitDisplay(encodedImage,76));
 
             // Désérialisation
             byte[] deserializedImage = (byte[]) serializer.deserialize(encodedImage);
@@ -34,11 +37,11 @@ public class SimpleAccessTest {
             // Vérifications
             //  1/ Automatique
             assert (Arrays.equals(deserializedImage, Files.readAllBytes(image.toPath())));
-            System.out.println("Cette sérialisation est bien réversible :)");
+            log.info("Cette sérialisation est bien réversible :)");
             //  2/ Manuelle
             File extractedImage = new File("petite_image_extraite.png");
             new FileOutputStream(extractedImage).write(deserializedImage);
-            System.out.println("Je peux vérifier moi-même en ouvrant mon navigateur de fichiers et en ouvrant l'image extraite dans le répertoire de ce Test");
+            log.info("Je peux vérifier moi-même en ouvrant mon navigateur de fichiers et en ouvrant l'image extraite dans le répertoire de ce Test");
 
 
         } catch (IOException e) {
